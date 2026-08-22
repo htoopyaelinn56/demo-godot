@@ -10,6 +10,8 @@
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.1, 0.1, 0.15, 1)
 
 [node name="Player" type="Node2D" parent="CanvasLayer" unique_id=492836168]
@@ -21,6 +23,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/UI" unique_id=713059449]
@@ -31,5 +35,5 @@ offset_left = -150.0
 offset_top = 10.0
 offset_right = 150.0
 offset_bottom = 40.0
-text = "Move with WASD or Arrow Keys"
+text = "Move with WASD or Arrow Keys and Shift key to run"
 horizontal_alignment = 1

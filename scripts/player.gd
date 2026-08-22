@@ -1,10 +1,11 @@
+@tool
 extends Node2D
 
 const SPEED = 300.0
 const BOOST_SPEED = 700.0
 const RADIUS = 30.0
 const CIRCLE_COLOR = Color(0.2, 0.6, 1.0)
-const BOOST_COLOR = Color(1.0, 0.4, 0.1)
+const BOOST_COLOR = Color(0.0, 0.738, 0.37, 1.0)
 const OUTLINE_COLOR = Color(1.0, 1.0, 1.0, 0.5)
 
 var _boosting := false
