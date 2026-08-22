@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://main2d"]
+
+[ext_resource type="Script" uid="uid://dn7mmv7suatk3" path="res://scripts/player.gd" id="1_player"]
+
+[node name="Main" type="Node2D" unique_id=398543602]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=319996323]
+
+[node name="Background" type="ColorRect" parent="CanvasLayer" unique_id=782060730]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.1, 0.1, 0.15, 1)
+
+[node name="Player" type="Node2D" parent="CanvasLayer" unique_id=492836168]
+position = Vector2(576, 324)
+script = ExtResource("1_player")
+
+[node name="UI" type="Control" parent="CanvasLayer" unique_id=107601710]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/UI" unique_id=713059449]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 10.0
+offset_right = 150.0
+offset_bottom = 40.0
+text = "Move with WASD or Arrow Keys"
+horizontal_alignment = 1
