@@ -18,8 +18,14 @@ config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=1152
+window/size/viewport_height=648
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[environment]
+
+defaults/default_clear_color=Color(0.07, 0.07, 0.1, 1)
 
 [physics]
 
