@@ -1,12 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://main2d"]
+[gd_scene format=3 uid="uid://main2d"]
 
+[ext_resource type="Script" uid="uid://b5ffwsvolimmb" path="res://scripts/main.gd" id="1_jyhfs"]
 [ext_resource type="Script" uid="uid://dn7mmv7suatk3" path="res://scripts/player.gd" id="1_player"]
 [ext_resource type="Script" uid="uid://b6b0t8i1jxxss" path="res://scripts/obstacles.gd" id="2_obstacles"]
+[ext_resource type="Script" uid="uid://eocdjr12ielv" path="res://scripts/nav_region.gd" id="3_sugp2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_player"]
 radius = 30.0
 
 [node name="Main" type="Node2D" unique_id=1143219108]
+script = ExtResource("1_jyhfs")
 
 [node name="WorldBackground" type="ColorRect" parent="." unique_id=102113323]
 offset_right = 2000.0
@@ -20,7 +23,7 @@ script = ExtResource("2_obstacles")
 position = Vector2(1000, 1000)
 script = ExtResource("1_player")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1528300489]
 shape = SubResource("CircleShape2D_player")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=158795505]
@@ -38,6 +41,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 
 [node name="Label" type="Label" parent="HUD/UI" unique_id=796530801]
@@ -50,3 +55,6 @@ offset_right = 220.0
 offset_bottom = 40.0
 text = "WASD / Arrows: Move  |  Shift: Boost"
 horizontal_alignment = 1
+
+[node name="Navigation" type="NavigationRegion2D" parent="." unique_id=343039817]
+script = ExtResource("3_sugp2")

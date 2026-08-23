@@ -1,0 +1,12 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_7p1mj"]
+[ext_resource type="Shape2D" path="res://resources/enemy_shape.tres" id="2_md0e3"]
+
+[node name="root" type="CharacterBody2D" unique_id=1196146178]
+script = ExtResource("1_7p1mj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1350714481]
+shape = ExtResource("2_md0e3")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1043466239]
