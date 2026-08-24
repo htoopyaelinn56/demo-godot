@@ -1,6 +1,6 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://bu3bxjsbnfwo0"]
 
-[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_7p1mj"]
+[ext_resource type="Script" uid="uid://25025pqaug6r" path="res://scripts/enemy.gd" id="1_7p1mj"]
 [ext_resource type="Shape2D" path="res://resources/enemy_shape.tres" id="2_md0e3"]
 
 [node name="root" type="CharacterBody2D" unique_id=1196146178]

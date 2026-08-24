@@ -17,7 +17,7 @@ func _draw() -> void:
 	draw_circle(Vector2.ZERO, RADIUS, color)
 	draw_arc(Vector2.ZERO, RADIUS, 0.0, TAU, 64, OUTLINE_COLOR, 2.0)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
 

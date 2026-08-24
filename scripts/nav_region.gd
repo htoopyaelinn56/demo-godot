@@ -11,7 +11,8 @@ func _ready() -> void:
 		return
 
 	var poly := NavigationPolygon.new()
-	poly.add_outline(PackedVector2Array([
+	var source_geometry := NavigationMeshSourceGeometryData2D.new()
+	source_geometry.add_traversable_outline(PackedVector2Array([
 		Vector2(MARGIN, MARGIN),
 		Vector2(WORLD_SIZE.x - MARGIN, MARGIN),
 		Vector2(WORLD_SIZE.x - MARGIN, WORLD_SIZE.y - MARGIN),
@@ -21,10 +22,9 @@ func _ready() -> void:
 	for obs in _obstacles:
 		var outline := _obstacle_outline(obs)
 		if outline.size() >= 3:
-			outline.reverse()
-			poly.add_outline(outline)
+			source_geometry.add_obstruction_outline(outline)
 
-	poly.make_polygons_from_outlines()
+	NavigationServer2D.bake_from_source_geometry_data(poly, source_geometry)
 	navigation_polygon = poly
 
 func _obstacle_outline(obs: Dictionary) -> PackedVector2Array:

@@ -59,18 +59,20 @@ func _build_colliders() -> void:
 		var body := StaticBody2D.new()
 		body.position = obs["pos"]
 		add_child(body)
-		var col := CollisionShape2D.new()
-		body.add_child(col)
 		match obs["type"]:
 			"rect":
+				var col := CollisionShape2D.new()
 				var shape := RectangleShape2D.new()
 				shape.size = obs["size"]
 				col.shape = shape
+				body.add_child(col)
 			"circle":
+				var col := CollisionShape2D.new()
 				var shape := CircleShape2D.new()
 				shape.radius = obs["radius"]
 				col.shape = shape
+				body.add_child(col)
 			"polygon":
-				var shape := ConvexPolygonShape2D.new()
-				shape.points = PackedVector2Array(obs["points"])
-				col.shape = shape
+				var col := CollisionPolygon2D.new()
+				col.polygon = PackedVector2Array(obs["points"])
+				body.add_child(col)

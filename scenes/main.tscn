@@ -8,6 +8,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_player"]
 radius = 30.0
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_1"]
+
 [node name="Main" type="Node2D" unique_id=1143219108]
 script = ExtResource("1_jyhfs")
 
@@ -57,4 +59,5 @@ text = "WASD / Arrows: Move  |  Shift: Boost"
 horizontal_alignment = 1
 
 [node name="Navigation" type="NavigationRegion2D" parent="." unique_id=343039817]
+navigation_polygon = SubResource("NavigationPolygon_1")
 script = ExtResource("3_sugp2")
